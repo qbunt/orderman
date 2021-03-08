@@ -38,7 +38,7 @@
 
 <h1>Orderman</h1>
 {#if user}
-<p>you are {user}</p>
+	<p>you are logged in as {user}</p>
 {:else }
-<p>you're not logged in</p>
+	<p>you're not logged in</p>
 {/if}

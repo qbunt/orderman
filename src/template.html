@@ -26,31 +26,21 @@
 	%sapper.head%
 </head>
 <body>
-	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
-
-
 	<div id="sapper">%sapper.html%</div>
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
 
 	<!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-
 	<script>
-		// Your web app's Firebase configuration
-		const dotenv = require('dotenv').config()
-		var firebaseConfig = {
+		firebase.initializeApp({
 			apiKey: "AIzaSyDybboTgcp64qfWj83NZ-8Ce4ansdLe1Ek",
 			authDomain: "orderman-11779.firebaseapp.com",
 			projectId: "orderman-11779",
 			storageBucket: "orderman-11779.appspot.com",
 			messagingSenderId: "89032796475",
 			appId: "1:89032796475:web:51bc0690cf4ccc027aaf1e"
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
+		})
 	</script>
 
 </body>

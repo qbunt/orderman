@@ -25,6 +25,13 @@
         $session.user = false;
         return;
       }
+      window.timeoutId = setTimeout(() => {
+        // handles 55 minute silent refresh on session
+        const user = firebase.auth().currentUser;
+        if (user) {
+          return firebase.auth().currentUser.getIdToken(true);
+        }
+      }, 1000 * 60 * 55);
     });
   });
 </script>
